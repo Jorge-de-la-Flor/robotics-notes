@@ -1,46 +1,19 @@
-# Occupancy Grid Mapping
+# Probabilistic Occupancy Grids: Mapping the Unknown
 
-Occupancy grids are a probabilistic method used by robots to represent their environment.
+Robotic mapping is the process of transforming sensor streams into a spatial representation of the world. Occupancy Grids provide a robust, probabilistic framework for this task.
 
-The world is divided into a grid of cells, and each cell stores the probability of being occupied.
+## Representation of Uncertainty
 
----
+The environment is divided into a grid of cells. Each cell stores the probability of being occupied. This allows for:
 
-## Concept
+- **Efficient Updates:** New measurements (from Lidar or Sonar) are added to the existing probability.
+- **Handling Unknowns:** Cells can represent "Unknown" space when we haven't explored them yet, typically starting at a 50% probability.
 
-Each grid cell represents:
+## Mapping as Information Gain
 
-- free space
-- occupied space
-- unknown space
+From a sensing perspective, mapping is about reducing uncertainty in the spatial domain.
 
-The robot updates these probabilities using sensor measurements.
+- **Unknown Space:** High uncertainty.
+- **Mapped Space:** Information gain (we know if it's free or occupied).
 
----
-
-## Why it works well
-
-Occupancy grids allow robots to build maps incrementally while moving.
-
-They are commonly used with sensors such as:
-
-- lidar
-- sonar
-- depth cameras
-
----
-
-## Applications
-
-Occupancy grids are widely used in:
-
-- mobile robot navigation
-- SLAM systems
-- path planning
-- obstacle avoidance
-
----
-
-## Key advantage
-
-They allow robots to reason about uncertainty in the environment rather than assuming perfect measurements.
+As the robot explores, it converts raw, noisy range data into a structured map that can be used for path planning and obstacle avoidance.
