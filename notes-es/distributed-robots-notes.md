@@ -1,35 +1,26 @@
-# Robots Distribuidos
+# Sistemas Robóticos Distribuidos: Coordinación y Escalabilidad
 
-Los sistemas robóticos modernos dependen cada vez más de la colaboración entre múltiples dispositivos.
+La robótica moderna se aleja cada vez más de las entidades monolíticas para adoptar sistemas distribuidos donde múltiples agentes o dispositivos periféricos trabajan en conjunto.
 
-Estos sistemas pueden incluir:
+## Desafíos de la Coordinación
 
-- Múltiples robots
-- Dispositivos periféricos
-- Nodos de sensores
+Operar en un entorno distribuido presenta desafíos de ingeniería específicos que van más allá de la robótica tradicional:
 
----
+- **Latencia de Comunicación:** La inconsistencia en la sincronización de datos puede provocar inestabilidad en los bucles de control.
 
-## Desafíos de coordinación
+- **Fallos de Nodos:** Los sistemas deben diseñarse con tolerancia a fallos, asegurando que el conjunto siga funcionando si falla una sola unidad.
 
-Los sistemas distribuidos deben gestionar:
+- **Sincronización de Reloj:** Fundamental para la fusión de sensores multiagente y la manipulación colaborativa.
 
-- Retrasos en la comunicación
-- Fallos de nodos
-- Problemas de sincronización
+## Mecanismos de Coordinación
 
----
+Para gestionar estos desafíos, implementamos patrones arquitectónicos específicos:
 
-## Mecanismos de coordinación comunes
+- **Monitorización del Estado:** Señales de estado continuas para detectar el estado de los nodos en tiempo real.
 
-Ejemplos:
+- **Asignación de Tareas Distribuidas:** Algoritmos que asignan roles en función de la proximidad, la duración de la batería o el hardware especializado.
+- **Consenso estatal:** Garantizar que todos los robots compartan una fuente de información coherente sobre el entorno.
 
-- Registros de dispositivos
-- Monitoreo de latidos
-- Asignación distribuida de tareas
+## Importancia estratégica
 
----
-
-## Por qué esto es importante
-
-Los sistemas robóticos de gran tamaño, como los robots de almacén o las flotas de drones, dependen de la coordinación distribuida para funcionar de forma fiable.
+Desde la automatización de almacenes hasta las flotas de drones, la coordinación distribuida es clave para la escalabilidad. Permite que un sistema sea más resistente y capaz que la suma de sus partes individuales.
