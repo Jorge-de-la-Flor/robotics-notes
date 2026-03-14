@@ -1,41 +1,21 @@
-# Diseño de Máquinas de Estados
+# Diseño de Máquinas de Estados: Estructurando Comportamientos Complejos
 
-Las máquinas de estados finitos se utilizan ampliamente en sistemas embebidos para estructurar el comportamiento.
+En robótica embebida, un comportamiento impredecible es un fallo. Las Máquinas de Estados Finitos (MEF) se utilizan para organizar la lógica compleja en transiciones bien definidas y predecibles.
 
-Permiten representar comportamientos complejos como transiciones entre estados bien definidos.
+## Por qué las MEF son importantes en robótica
 
----
+Los robots suelen operar por etapas (p. ej., Buscar -> Identificar -> Agarrar -> Devolver). Una máquina de estados garantiza que:
 
-## Estructura básica
+- **Previsibilidad:** El robot solo puede estar en un estado a la vez.
 
-Una máquina de estados generalmente incluye:
+- **Modularidad:** Se pueden añadir nuevos comportamientos como nuevos estados sin alterar la lógica existente.
 
-- Un conjunto de estados
-- Transiciones entre estados
-- Eventos que desencadenan transiciones
+- **Seguridad:** Podemos definir estados de "Seguridad" o "Error" a los que el sistema recurre por defecto en caso de fallo del sensor.
 
----
+## Diseño para el Determinismo
 
-## Por qué son útiles
+Mediante el uso de máquinas de estados, dejamos atrás el código desordenado (sentencias if-else anidadas) y avanzamos hacia un diseño arquitectónico. Esto facilita la depuración, las pruebas y la verificación del sistema, requisitos indispensables para cualquier plataforma autónoma de misión crítica.
 
-Las máquinas de estados hacen que el comportamiento del sistema sea:
+## Integración con el Control
 
-- Predecible
-- Modular
-- Más fácil de depurar
-
----
-
-## Ejemplo en robótica
-
-Los robots suelen implementar comportamientos como:
-
-BUSCAR → ACERCAR → AGARRAR → RETORNO
-
-Cada etapa puede representarse como un estado en el sistema.
-
----
-
-## Relevancia en sistemas embebidos
-
-Las máquinas de estados son especialmente útiles en sistemas embebidos donde el comportamiento determinista es importante.
+Mientras que un bucle PID gestiona el "cómo moverse", la máquina de estados gestiona el "qué hacer". Juntos, forman el puente entre la inteligencia de alto nivel y la ejecución de bajo nivel.
