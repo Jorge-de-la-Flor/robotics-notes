@@ -1,60 +1,53 @@
 [English](README.md) | Español
 
-# Notas de Robótica
+# Sistemas Ciber-Físicos y Robótica: Bitácora Técnica
 
-Notas de ingeniería y explicaciones conceptuales sobre temas comunes en robótica, sistemas embebidos y sistemas ciberfísicos.
+> "Cerrando la brecha entre la percepción probabilística y la ejecución determinante."
 
-Este repositorio contiene breves notas técnicas diseñadas para aclarar la intuición de los algoritmos y patrones arquitectónicos utilizados en robótica y máquinas distribuidas.
+Este repositorio es una colección curada de notas técnicas que exploran la intersección entre la Robótica Probabilística, la Teoría de Control y las Arquitecturas de Sistemas Embebidos de Alta Fiabilidad.
 
-El enfoque no se centra en las implementaciones de producción, sino en comprender las **ideas de ingeniería que subyacen a los sistemas**.
-
----
-
-## Temas tratados
-
-Estas notas exploran conceptos relacionados con:
-
-- Detección probabilística
-- Estimación bayesiana
-- Percepción robótica
-- Sistemas de control de retroalimentación
-- Arquitecturas de comportamiento embebidas
-- Sistemas robóticos distribuidos
+El objetivo es documentar el razonamiento estructurado necesario para construir sistemas autónomos que operen en entornos reales de alta criticidad, transitando desde mediciones inciertas hacia la certeza arquitectónica.
 
 ---
 
-## Notas
+## Áreas Técnicas
 
-### Intuición del Filtro de Kalman
+- **Estimación de Estado Óptima:** Inferencia de la realidad a partir de observaciones ruidosas y parciales mediante filtrado Bayesiano recursivo.
+- **Autonomía Determinista:** Gestión de restricciones en tiempo real y co-diseño de hardware y software para una fiabilidad de misión crítica.
+- **Mapeo Probabilístico:** Representación espacial mediante la reducción de la entropía de Shannon y modelos de rejillas de ocupación.
+- **Teoría de Control:** Estabilidad, mecanismos de retroalimentación y corrección de errores en sistemas físicos dinámicos.
 
-Una explicación intuitiva de por qué funcionan los filtros de Kalman y cómo combinan la predicción y las actualizaciones de las mediciones.
+---
 
-### Mapeo de Cuadrícula de Ocupación
+## Índice de Notas Técnicas
 
-Notas sobre la representación probabilística del entorno utilizada en la percepción y el mapeo de robots.
+A continuación se presenta el índice organizado de exploraciones conceptuales e intuiciones de ingeniería:
 
-### Intuición del controlador PID
+### Percepción y Estimación
 
-Comprender el control proporcional-integral-derivativo y cómo la retroalimentación estabiliza los sistemas dinámicos.
+- [Estimación de Estado: Infiriendo la Realidad desde el Ruido](./notes-es/state-estimation-intuition.md)
+- [El Filtro de Kalman: Estimación Lineal Óptima](./notes-es/kalman-filter-intuition.md)
+- [Robótica Probabilística: Gestionando la Incertidumbre](./notes-es/probabilistic-robotics-intuition.md)
+- [Mapeo mediante Rejillas de Ocupación: El Espacio Desconocido](./notes-es/occupancy-grid-notes.md)
 
-### Diseño de máquinas de estados
+### Control y Comportamiento
 
-Patrones de diseño para implementar el control del comportamiento en sistemas robóticos embebidos.
+- [Por qué el Determinismo es el Fundamento de la Autonomía](./notes-es/why-determinism-is-the-foundation-of-autonomy.md)
+- [Control PID: Retroalimentación y Estabilidad](./notes-es/pid-controller-intuition.md)
+- [Diseño de Máquinas de Estado: Comportamiento Predecible](./notes-es/state-machine-design.md)
 
-### Robots distribuidos
+### Sistemas Distribuidos
 
-Notas conceptuales sobre la coordinación de múltiples robots o dispositivos periféricos en entornos distribuidos.
+- [Robótica Distribuida: Coordinación y Escalabilidad](./notes-es/distributed-robots-notes.md)
 
 ---
 
 ## Propósito
 
-Estas notas sirven como cuaderno de ingeniería personal para aclarar ideas durante el estudio de sistemas robóticos.
-
-También pueden servir como referencia rápida para ingenieros que exploran conceptos similares.
+Esta bitácora documenta mi madurez técnica y mi filosofía de ingeniería. Refleja un compromiso con la precisión, documentando la transición de algoritmos teóricos hacia sistemas robóticos autónomos desplegables.
 
 ---
 
 ## Licencia
 
-Licencia MIT
+Licencia MIT | 2026

@@ -1,60 +1,53 @@
 English | [Español](README.es.md)
 
-# Robotics Notes
+# Robotics and Cyber-Physical Systems: Technical Logbook
 
-Engineering notes and conceptual explanations about topics commonly used in robotics, embedded systems, and cyber-physical systems.
+> "Bridging the gap between probabilistic perception and deterministic execution."
 
-This repository contains short technical notes written to clarify intuition behind algorithms and architectural patterns used in robotics and distributed machines.
+This repository is a curated collection of technical notes exploring the intersection of Probabilistic Robotics, Control Theory, and High-Reliability Embedded Architectures.
 
-The focus is not on production implementations but on understanding the **engineering ideas behind the systems**.
-
----
-
-## Topics covered
-
-These notes explore concepts related to:
-
-- probabilistic sensing
-- Bayesian estimation
-- robot perception
-- feedback control systems
-- embedded behaviour architectures
-- distributed robotic systems
+The objective is to document the structured reasoning required to build autonomous systems that operate in high-stakes, real-world environments—moving from uncertain measurements toward architectural certainty.
 
 ---
 
-## Notes
+## Technical Areas
 
-### Kalman Filter Intuition
+- **Optimal State Estimation:** Inferring reality from noisy and partial observations via recursive Bayesian filtering.
+- **Deterministic Autonomy:** Addressing real-time constraints and hardware-software co-design for mission-critical reliability.
+- **Probabilistic Mapping:** Spatial representation through Shannon entropy reduction and occupancy grid modeling.
+- **Control Theory:** Stability, feedback mechanisms, and error correction in dynamic physical systems.
 
-An intuitive explanation of why Kalman filters work and how they combine prediction and measurement updates.
+---
 
-### Occupancy Grid Mapping
+## Technical Notes Index
 
-Notes about probabilistic environment representation used in robot perception and mapping.
+Below is the organized index of conceptual explorations and engineering intuitions:
 
-### PID Controller Intuition
+### Perception and Estimation
 
-Understanding proportional–integral–derivative control and how feedback stabilizes dynamic systems.
+- [State Estimation: Inferring Reality from Noise](./notes/state-estimation-intuition.md)
+- [The Kalman Filter: Optimal Linear Estimation](./notes/kalman-filter-intuition.md)
+- [Probabilistic Robotics: Managing Uncertainty](./notes/probabilistic-robotics-intuition.md)
+- [Occupancy Grid Mapping: The Unknown Space](./notes/occupancy-grid-notes.md)
 
-### State Machine Design
+### Control and Behavior
 
-Design patterns for implementing behaviour control in embedded robotics systems.
+- [Why Determinism is the Foundation of Autonomy](./notes/why-determinism-is-the-foundation-of-autonomy.md)
+- [PID Control: Feedback and Stability](./notes/pid-controller-intuition.md)
+- [State Machine Design: Predictable Behavior](./notes/state-machine-design.md)
 
-### Distributed Robots
+### Distributed Systems
 
-Conceptual notes on coordinating multiple robots or edge devices in distributed environments.
+- [Distributed Robots: Coordination and Scalability](./notes/distributed-robots-notes.md)
 
 ---
 
 ## Purpose
 
-These notes exist as a personal engineering notebook used to clarify ideas while studying robotics systems.
-
-They may also serve as a quick reference for engineers exploring similar concepts.
+This logbook documents my technical maturity and engineering philosophy. It reflects a commitment to precision, documenting the transition from theoretical algorithms to deployable, autonomous robotic systems.
 
 ---
 
 ## License
 
-MIT License
+MIT License | 2026
