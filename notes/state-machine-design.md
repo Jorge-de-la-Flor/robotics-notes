@@ -1,41 +1,19 @@
-# State Machine Design
+# State Machine Design: Structuring Complex Behaviour
 
-Finite state machines are widely used in embedded systems to structure behaviour.
+In embedded robotics, unpredictable behaviour is a failure. Finite State Machines (FSMs) are used to organize complex logic into well-defined, predictable transitions.
 
-They allow complex behaviour to be represented as transitions between well-defined states.
+## Why FSMs Matter in Robotics
 
----
+Robots often operate in stages (e.g., Search -> Identify -> Grab -> Return). A state machine ensures that:
 
-## Basic structure
+- **Predictability:** The robot can only be in one state at a time.
+- **Modularity:** New behaviours can be added as new states without breaking existing logic.
+- **Safety:** We can define "Safe" or "Error" states that the system defaults to in case of sensor failure.
 
-A state machine typically includes:
+## Designing for Determinism
 
-- a set of states
-- transitions between states
-- events that trigger transitions
+By using state machines, we move away from "spaghetti code" (nested if-else statements) toward an architectural design. This makes the system easier to debug, test, and verify—a requirement for any mission-critical autonomous platform.
 
----
+## Integration with Control
 
-## Why they are useful
-
-State machines make system behaviour:
-
-- predictable
-- modular
-- easier to debug
-
----
-
-## Example in robotics
-
-Robots often implement behaviours such as:
-
-SEARCH → APPROACH → GRAB → RETURN
-
-Each stage can be represented as a state in the system.
-
----
-
-## Embedded systems relevance
-
-State machines are especially useful in embedded systems where deterministic behaviour is important.
+While a PID loop handles the "how to move," the State Machine handles the "what to do." Together, they form the bridge between high-level intelligence and low-level execution.
