@@ -1,46 +1,21 @@
-# Mapeo de Cuadrículas de Ocupación
+# Cuadrículas de Ocupación Probabilísticas: Mapeando lo Desconocido
 
-Las cuadrículas de ocupación son un método probabilístico que utilizan los robots para representar su entorno.
+El mapeo robótico es el proceso de transformar flujos de datos de sensores en una representación espacial del mundo. Las cuadrículas de ocupación proporcionan un marco probabilístico robusto para esta tarea.
 
-El mundo se divide en una cuadrícula de celdas, y cada celda almacena la probabilidad de estar ocupada.
+## Representación de la Incertidumbre
 
----
+El entorno se divide en una cuadrícula de celdas. Cada celda almacena la probabilidad de estar ocupada. Esto permite:
 
-## Concepto
+- **Actualizaciones Eficientes:** Las nuevas mediciones (de Lidar o Sonar) se suman a la probabilidad existente.
 
-Cada celda de la cuadrícula representa:
+- **Gestión de lo Desconocido:** Las celdas pueden representar espacio "desconocido" cuando aún no lo hemos explorado, generalmente con una probabilidad inicial del 50 %.
 
-- espacio libre
-- espacio ocupado
-- espacio desconocido
+## Mapeo como Ganancia de Información
 
-El robot actualiza estas probabilidades utilizando las mediciones de sus sensores.
+Desde la perspectiva de la detección, el mapeo consiste en reducir la incertidumbre en el dominio espacial.
 
----
+- **Espacio Desconocido:** Alta incertidumbre.
 
-## Por qué funciona bien
+- **Espacio Mapeado:** Ganancia de información (sabemos si está libre u ocupado).
 
-Las cuadrículas de ocupación permiten a los robots construir mapas de forma incremental mientras se mueven.
-
-Se utilizan comúnmente con sensores como:
-
-- lidar
-- sonar
-- cámaras de profundidad
-
----
-
-## Aplicaciones
-
-Las cuadrículas de ocupación se utilizan ampliamente en:
-
-- navegación de robots móviles
-- sistemas SLAM
-- planificación de rutas
-- evasión de obstáculos
-
----
-
-## Ventaja clave
-
-Permiten a los robots razonar sobre la incertidumbre del entorno en lugar de asumir mediciones perfectas.
+A medida que el robot explora, convierte los datos de alcance brutos y ruidosos en un mapa estructurado que puede utilizarse para planificar rutas y evitar obstáculos.
