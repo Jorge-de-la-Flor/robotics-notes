@@ -1,67 +1,19 @@
-# Intuición del Filtro de Kalman
+# El filtro de Kalman: Una intuición de la estimación óptima
 
-El filtro de Kalman es un algoritmo que se utiliza para estimar el estado de un sistema dinámico a partir de mediciones con ruido.
+El filtro de Kalman es el algoritmo definitivo para el seguimiento y la estimación en sistemas lineales. No es simplemente un filtro, sino un método matemático para encontrar el estado más probable de un sistema.
 
-Se utiliza ampliamente en robótica, sistemas de navegación y aplicaciones de detección integrada.
+## La lógica central: Confianza vs. Verificación
 
----
+El filtro opera en un ciclo continuo de predicción y actualización, mediado por un factor de "ganancia":
 
-## Idea central
+- Si nuestros sensores son muy precisos, el filtro confía más en la medición.
 
-Un sistema normalmente tiene:
+- Si nuestro modelo de movimiento es muy preciso, pero los sensores son ruidosos, el filtro confía más en la predicción.
 
-- un **modelo de predicción**
-- **mediciones con ruido**
+## Por qué es "óptimo"
 
-El filtro de Kalman combina ambas fuentes de información para estimar el estado más probable.
+El filtro de Kalman está diseñado para minimizar el error cuadrático medio de la estimación. Mantiene una "matriz de covarianza" que representa la incertidumbre del sistema. Al minimizar esta incertidumbre, garantiza que la estimación resultante sea la representación estadísticamente más certera posible de la realidad.
 
----
+## Aplicación en robótica
 
-## Dos fases
-
-### Predicción
-
-El modelo del sistema predice el siguiente estado:
-
-- posición
-- velocidad
-- variables del sistema
-
-Esta predicción se basa en estimaciones previas y en la dinámica del sistema.
-
----
-
-### Actualización
-
-Cuando se recibe una medición, el filtro actualiza la estimación combinando:
-
-- estado predicho
-- medición del sensor
-
-El algoritmo asigna un peso en función de la **incertidumbre** de cada fuente.
-
----
-
-## Por qué funciona
-
-El filtro funciona porque modela:
-
-- Incertidumbre del proceso
-- Incertidumbre de la medición
-
-Mediante matrices de covarianza, determina el grado de confianza en la predicción frente a la medición.
-
----
-
-## Por qué es importante en robótica
-
-Los robots rara vez observan el mundo a la perfección.
-
-Los sensores son ruidosos, tienen retrasos y, a veces, poco fiables.
-
-Los filtros de Kalman permiten a los robots mantener estimaciones estables de:
-
-- Posición
-- Velocidad
-- Orientación
-- Estado del sistema
+En la robótica moderna, este es el pilar de la fusión de sensores. Permite a los robots mantener una posición y una dirección estables incluso cuando los sensores individuales proporcionan información contradictoria o ruidosa.
