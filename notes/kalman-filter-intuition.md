@@ -1,67 +1,18 @@
-# Kalman Filter Intuition
+# The Kalman Filter: An Intuition of Optimal Estimation
 
-The Kalman filter is an algorithm used to estimate the state of a dynamic system from noisy measurements.
+The Kalman Filter is the definitive algorithm for tracking and estimation in linear systems. It is not merely a filter, but a mathematical way to find the most likely state of a system.
 
-It is widely used in robotics, navigation systems, and embedded sensing applications.
+## The Core Logic: Trust vs. Verification
 
----
+The filter operates on a continuous cycle of Prediction and Update, mediated by a "Gain" factor:
 
-## Core idea
+- If our sensors are highly precise, the filter trusts the Measurement more.
+- If our motion model is very accurate but sensors are noisy, the filter trusts the Prediction more.
 
-A system typically has:
+## Why it is "Optimal"
 
-- a **prediction model**
-- **noisy measurements**
+The Kalman Filter is designed to minimize the mean square error of the estimate. It maintains a "Covariance Matrix" which represents the uncertainty of the system. By minimizing this uncertainty, it ensures that the resulting estimate is the most statistically certain representation of reality possible.
 
-The Kalman filter combines both sources of information to estimate the most probable state.
+## Application in Robotics
 
----
-
-## Two phases
-
-### Prediction
-
-The system model predicts the next state:
-
-- position
-- velocity
-- system variables
-
-This prediction is based on previous estimates and the system dynamics.
-
----
-
-### Update
-
-When a measurement arrives, the filter updates the estimate by combining:
-
-- predicted state
-- sensor measurement
-
-The algorithm assigns weight depending on the **uncertainty** of each source.
-
----
-
-## Why it works
-
-The filter works because it models:
-
-- process uncertainty
-- measurement uncertainty
-
-Using covariance matrices, it determines how much trust to place in prediction versus measurement.
-
----
-
-## Why it matters in robotics
-
-Robots rarely observe the world perfectly.
-
-Sensors are noisy, delayed, and sometimes unreliable.
-
-Kalman filters allow robots to maintain stable estimates of:
-
-- position
-- velocity
-- orientation
-- system state
+In modern robotics, this is the backbone of sensor fusion. It allows robots to maintain a stable position and heading even when individual sensors provide contradictory or noisy information.
