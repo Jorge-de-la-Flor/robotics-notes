@@ -65,3 +65,9 @@ MIT License | 2026
 For deeper dives into specific limitations and failure modes:
 
 → https://github.com/Jorge-de-la-Flor/robotics-research-notes
+
+---
+
+## Engineering Philosophy
+
+→ [Engineering philosophy](./notes/engineering-philosophy.md)

@@ -65,3 +65,9 @@ Licencia MIT | 2026
 Para profundizar en limitaciones y modos de fallo específicos:
 
 → https://github.com/Jorge-de-la-Flor/robotics-research-notes
+
+---
+
+## Filosofía de la ingeniería
+
+→ [Filosofía de la ingeniería](./notes/engineering-philosophy.md)
