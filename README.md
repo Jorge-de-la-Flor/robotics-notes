@@ -4,9 +4,9 @@ English | [Español](README.es.md)
 
 > "Bridging the gap between probabilistic perception and deterministic execution."
 
-This repository is a curated collection of technical notes exploring the intersection of Probabilistic Robotics, Control Theory, and High-Reliability Embedded Architectures.
+This repository documents structured technical explorations in probabilistic robotics, control systems, and high-reliability embedded architectures.
 
-The objective is to document the structured reasoning required to build autonomous systems that operate in high-stakes, real-world environments—moving from uncertain measurements toward architectural certainty.
+The objective is to capture the structured reasoning required to build autonomous systems that operate in high-stakes, real-world environments—moving from uncertain measurements toward architectural certainty.
 
 ---
 
@@ -19,7 +19,7 @@ The objective is to document the structured reasoning required to build autonomo
 
 ---
 
-## Technical Notes Index
+## Technical Notes
 
 Below is the organized index of conceptual explorations and engineering intuitions:
 
@@ -48,6 +48,20 @@ This logbook documents my technical maturity and engineering philosophy. It refl
 
 ---
 
+## Engineering Focus
+
+Emphasis is placed on system reliability under uncertainty, including noisy sensing, constrained computation, and asynchronous communication across distributed components.
+
+---
+
 ## License
 
 MIT License | 2026
+
+---
+
+## Advanced Technical Explorations
+
+For deeper dives into specific limitations and failure modes:
+
+→ https://github.com/Jorge-de-la-Flor/robotics-research-notes
