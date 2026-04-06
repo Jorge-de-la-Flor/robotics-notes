@@ -4,9 +4,9 @@
 
 > "Cerrando la brecha entre la percepción probabilística y la ejecución determinante."
 
-Este repositorio es una colección curada de notas técnicas que exploran la intersección entre la Robótica Probabilística, la Teoría de Control y las Arquitecturas de Sistemas Embebidos de Alta Fiabilidad.
+Este repositorio documenta exploraciones técnicas estructuradas en robótica probabilística, sistemas de control y arquitecturas embebidas de alta fiabilidad.
 
-El objetivo es documentar el razonamiento estructurado necesario para construir sistemas autónomos que operen en entornos reales de alta criticidad, transitando desde mediciones inciertas hacia la certeza arquitectónica.
+El objetivo es capturar el razonamiento estructurado necesario para construir sistemas autónomos que operen en entornos reales y críticos, pasando de mediciones inciertas a certeza arquitectónica.
 
 ---
 
@@ -19,7 +19,7 @@ El objetivo es documentar el razonamiento estructurado necesario para construir 
 
 ---
 
-## Índice de Notas Técnicas
+## Notas Técnicas
 
 A continuación se presenta el índice organizado de exploraciones conceptuales e intuiciones de ingeniería:
 
@@ -48,6 +48,20 @@ Esta bitácora documenta mi madurez técnica y mi filosofía de ingeniería. Ref
 
 ---
 
+## Enfoque de Ingeniería
+
+Se hace hincapié en la fiabilidad del sistema en condiciones de incertidumbre, incluyendo la detección con ruido, la computación con restricciones y la comunicación asíncrona entre componentes distribuidos.
+
+---
+
 ## Licencia
 
 Licencia MIT | 2026
+
+---
+
+## Exploraciones técnicas avanzadas
+
+Para profundizar en limitaciones y modos de fallo específicos:
+
+→ https://github.com/Jorge-de-la-Flor/robotics-research-notes
